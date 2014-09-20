@@ -12,7 +12,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
-gem 'pg'
+gem 'sqlite3'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -34,6 +34,7 @@ group :doc do
 end
 
 group :production do
+  gem 'pg'
   gem 'rails_12factor' # add for DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins
 end
 
