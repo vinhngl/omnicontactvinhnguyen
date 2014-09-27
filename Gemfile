@@ -12,7 +12,6 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
-gem 'pg'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -26,14 +25,19 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-gem 'omnicontacts'
+gem 'omnicontacts', :git => 'https://github.com/Diego81/omnicontacts.git'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
 
+group :development do
+  gem 'sqlite3'
+end
+
 group :production do
+  gem 'pg'
   gem 'rails_12factor' # add for DEPRECATION WARNING: You have Rails 2.3-style plugins in vendor/plugins
 end
 
