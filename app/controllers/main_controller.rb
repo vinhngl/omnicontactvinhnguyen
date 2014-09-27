@@ -3,6 +3,9 @@ class MainController < ApplicationController
   end
 
   def contact
+    puts "===="
+    puts request.inspect
+    pust contacts_as_json
     @contacts = request.env['omnicontacts.contacts']
     respond_to do |format|
       format.html 
